@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <color name="colorPrimary">#3d3e51</color>
+    <color name="colorPrimaryDark">#3d3e51</color>
+    <color name="colorAccent">#9576fc</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorTextWhite1">#e7e5e5</color>
+    <color name="colorTextWhite2">#e9e8e8</color>
+    <color name="colorTextWhite3">#b3b0b0</color>
+    <color name="colorTextGray">#73798c</color>
+    <color name="colorItem">#414459</color>
+    <color name="colorAccentEnd">#9576fc</color>
+    <color name="colorAccentStart">#71b8fb</color>
+
+    <color name="colorPieChart1">#96c6fd</color>
+    <color name="colorPieChart2">#6f54e6</color>
+    <color name="colorPieChart3">#e6a239</color>
+    <color name="colorPieChart4">#86d06d</color>
+    <color name="colorPieChart5">#59B6DC</color>
+    <color name="colorPieChart6">#F9C909</color>
+    <color name="colorPieChart7">#e1677a</color>
+
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="red_f4333c">#F4333C</color>
+
+
+
+</resources>

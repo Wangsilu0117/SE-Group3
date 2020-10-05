@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.bakumon.moneykeeper.ui.add.AddRecordActivity">
+
+    <data>
+
+        <variable
+            name="affirmEnable"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="123"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/title_bar"
+                layout="@layout/layout_title_bar" />
+
+            <include
+                android:id="@+id/type_choice"
+                layout="@layout/layout_type_choice" />
+
+            <me.bakumon.moneykeeper.view.TypePageView
+                android:id="@+id/type_page_outlay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="visible"
+                tools:ignore="NestedWeights" />
+
+            <me.bakumon.moneykeeper.view.TypePageView
+                android:id="@+id/type_page_income"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center">
+
+                <me.bakumon.moneykeeper.view.QMUIAlphaTextView
+                    android:id="@+id/qm_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_date"
+                    android:maxLength="20"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/text_today"
+                    android:textColor="@color/colorTextWhite2" />
+
+                <EditText
+                    android:id="@+id/edt_remark"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/bg_date"
+                    android:hint="@string/hint_enter_remark"
+                    android:imeOptions="actionDone"
+                    android:maxLength="9"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextWhite2"
+                    android:textColorHint="@color/colorTextGray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <me.bakumon.moneykeeper.view.KeyboardView
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:background="@color/colorItem" />
+
+    </LinearLayout>
+</layout>
