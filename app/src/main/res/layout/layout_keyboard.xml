@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge>
+
+        <EditText
+            android:id="@+id/edit_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="@string/hint_enter_money"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorKeyBoard"
+            android:textColorHint="@color/colorTextGray"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:background="@color/colorTextWhite5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    tools:ignore="NestedWeights">
+
+                    <TextView
+                        android:id="@+id/keyboard_num_1"
+                        style="@style/text_view_input_num"
+                        android:text="1"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_2"
+                        style="@style/text_view_input_num"
+                        android:text="2"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_3"
+                        style="@style/text_view_input_num"
+                        android:text="3"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/keyboard_num_4"
+                        style="@style/text_view_input_num"
+                        android:text="4"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_5"
+                        style="@style/text_view_input_num"
+                        android:text="5"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_6"
+                        style="@style/text_view_input_num"
+                        android:text="6"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/keyboard_num_7"
+                        style="@style/text_view_input_num"
+                        android:text="7"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_8"
+                        style="@style/text_view_input_num"
+                        android:text="8"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_9"
+                        style="@style/text_view_input_num"
+                        android:text="9"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/keyboard_num_point"
+                        style="@style/text_view_input_num"
+                        android:text="."
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/keyboard_num_0"
+                        style="@style/text_view_input_num"
+                        android:text="0"
+                        android:textColor="@color/colorKeyBoard"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/keyboard_delete"
+                    style="@style/bg_press"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_input_delete" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/keyboard_affirm"
+                    style="@style/text_view_input_affirm"
+                    android:background="@color/theme_color3"
+                    android:text="@string/text_affirm" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </merge>
+</layout>

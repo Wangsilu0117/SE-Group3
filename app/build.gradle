@@ -1,0 +1,194 @@
+apply plugin: 'com.android.application'
+apply plugin: 'AndResGuard'
+
+/*
+ * Copyright 2018 Bakumon. https://github.com/Bakumon
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+// 加载 keystore.properties 文件
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+    defaultConfig {
+        applicationId "me.bakumon.moneykeeper"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 3
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // 指定room.schemaLocation生成的文件路径
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        debug {
+            storeFile file("key/debug_key")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+        release {
+            storeFile file(keystoreProperties['RELEASE_STORE_FILE'])
+            storePassword keystoreProperties['RELEASE_KEYSTORE_PASSWORD']
+            keyAlias keystoreProperties['RELEASE_KEY_ALIAS']
+            keyPassword keystoreProperties['RELEASE_KEY_PASSWORD']
+        }
+    }
+    buildTypes {
+        debug {
+            // 签名
+            signingConfig signingConfigs.debug
+            versionNameSuffix ".debug"
+            applicationIdSuffix ".debug"
+            resValue "string", "scheme", "mk-debug"
+            // 只会给 res/values/string.xml 增加，不会影响其他 values 文件夹
+            resValue "string", "app_name", "女神记账本"
+        }
+        release {
+            // 签名
+            signingConfig signingConfigs.release
+            resValue "string", "scheme", "mk"
+            resValue "string", "app_name", "女神记账"
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            // 混淆
+            minifyEnabled true
+            proguardFile 'proguard-android.txt'
+            proguardFile 'proguard-rules.pro'
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "MoneyKeeper-${variant.baseName}-${variant.versionCode}-${variant.versionName}.apk"
+            }
+        }
+    }
+}
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // it will keep the origin path of your resources when it's true
+    keepRoot = false
+
+    whiteList = [
+            // your icon
+            "R.mipmap.type_item_default",
+            "R.mipmap.type_item_setting",
+            "R.mipmap.type_3c",
+            "R.mipmap.type_calendar",
+            "R.mipmap.type_candy",
+            "R.mipmap.type_cigarette",
+            "R.mipmap.type_clothes",
+            "R.mipmap.type_eat",
+            "R.mipmap.type_fitness",
+            "R.mipmap.type_humanity",
+            "R.mipmap.type_pet",
+            "R.mipmap.type_pill",
+            "R.mipmap.type_pluralism",
+            "R.mipmap.type_salary",
+            "R.mipmap.type_sim",
+            "R.mipmap.type_study",
+            "R.mipmap.type_train",
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.13'
+        //path = "/usr/local/bin/7za"
+    }
+
+    /**
+     * Optional: if finalApkBackupPath is null, AndResGuard will overwrite final apk
+     * to the path which assemble[Task] write to
+     **/
+    // finalApkBackupPath = "${project.rootDir}/final.apk"
+
+    /**
+     * Optional: Specifies the name of the message digest algorithm to user when digesting the entries of JAR file
+     * Only works in V1signing, default value is "SHA-1"
+     **/
+     digestalg = "SHA-256"
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:23.1.1'
+    implementation 'com.contrarywind:wheelview:4.1.0'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation project(path: ':lockpattern')
+    uniformSupportVersion(configurations)
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // test
+    testImplementation deps.junit
+    androidTestImplementation deps.test_runner
+    androidTestImplementation deps.spresso_core
+    // 支持库
+    implementation deps.support.app_compat
+    implementation deps.support.design
+    // customtabs
+    implementation deps.support.customtabs
+    // ViewModel and LiveData
+    implementation deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    // Room
+    implementation deps.room.runtime
+    implementation deps.room.rxjava2
+    annotationProcessor deps.room.compiler
+    // 第三方库
+    implementation deps.rxjava
+    implementation deps.rxandroid
+    // base adapter
+    implementation deps.BRVAH
+    // 路由
+    implementation deps.floo
+    // 日期时间选择器
+    implementation deps.datetimepicker
+    // 图表
+    implementation deps.MPChart
+    // 内存泄漏检测
+    debugImplementation deps.leakcanary_debug
+    releaseImplementation deps.leakcanary_release
+    // 动态权限申请
+    implementation deps.permission
+    // 保存文件
+    implementation deps.storage
+    // 时间格式化
+    implementation deps.prettytime
+    // 圆形 ImageView
+    implementation deps.circleimageview
+    implementation 'com.github.devlight.shadowlayout:library:+'
+
+}

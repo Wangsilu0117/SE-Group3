@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/banner3"
+    tools:context=".login.RegisterActivity">
+
+    <TextView
+        android:id="@+id/register_textChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"
+        android:text="设置文本密码"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/register_gestureChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"
+        android:text="设置图形密码"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff" />
+
+
+    <EditText
+        android:id="@+id/register_text"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_below="@+id/register_textChoice"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_width="250dp"
+        android:singleLine="true"
+        android:hint="输入密码"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/register_text2"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_below="@+id/register_text"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_width="250dp"
+        android:singleLine="true"
+        android:hint="重新输入密码"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/register_gesture"
+        android:layout_below="@+id/register_gestureChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="绘制解锁图案"/>
+
+        <com.star.lockpattern.widget.LockPatternView
+            android:id="@+id/lockPatternView"
+            android:layout_width="270dp"
+            android:layout_height="270dp" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="重新设置"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_text_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:background="#ffffff"
+        android:layout_below="@id/register_text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+
+    <string name="gesture_forget_gesture">gesture_forget_gesture</string>
+    <string name="gesture_default">gesture_default</string>
+    <string name="gesture_error">gesture_error</string>
+    <string name="gesture_correct">gesture_correct</string>
+
+    <string name="create_gesture_default">create_gesture_default</string>
+    <string name="create_gesture_correct">create_gesture_correct</string>
+    <string name="create_gesture_less_error">create_gesture_less_error，请重新输入</string>
+    <string name="create_gesture_confirm_error">create_gesture_confirm_error，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">create_gesture_confirm_correct</string>
+    <string name="create_gesture_reset">create_gesture_reset</string>
+
+
+    <string name="content_des_setting">setting</string>
+    <string name="content_des_statistics">statistics</string>
+    <string name="content_des_close">close</string>
+
+    <string name="toast_add_record_fail">Billing failed, please try again</string>
+    <string name="toast_modify_record_fail">Failed to modify record</string>
+    <string name="toast_sort_fail">Failed to sort</string>
+    <string name="toast_least_one_type">Please keep at least one type</string>
+    <string name="toast_delete_fail">failed to delete</string>
+    <string name="toast_type_img_fail">Failed to get type picture</string>
+    <string name="toast_type_save_fail">Failed to save the type</string>
+    <string name="toast_type_is_exist">&#160;The type already exists</string>
+    <string name="toast_record_delete_fail">Failed to delete record</string>
+    <string name="toast_current_sum_money_fail">Failed to obtain the total amount of expenditure income this month</string>
+    <string name="toast_records_fail">Failed to get list data</string>
+    <string name="toast_init_types_fail">Failed to initialize type data</string>
+    <string name="toast_get_types_fail">Failed to get type data</string>
+    <string name="toast_get_statistics_fail">Failed to get statistics</string>
+    <string name="toast_get_month_summary_fail">Failed to get summary data for the month</string>
+    <string name="toast_get_type_summary_fail">Failed to get type summary data</string>
+    <string name="toast_not_install_market">Your phone does not have an Android app market installed</string>
+    <string name="toast_not_install_alipay">Thank you, you did not install Alipay application</string>
+    <string name="toast_is_not_writable_external">Backup failed, external storage is unavailable</string>
+    <string name="toast_restore_fail">Failed to restore the backup</string>
+    <string name="toast_backup_list_fail">Failed to get backup file list</string>
+    <string name="toast_backup_success">Backup was successful</string>
+    <string name="toast_backup_fail">Backup failed</string>
+    <string name="toast_open_auto_backup">Automatic backup is turned off. You can go to settings to reopen</string>
+
+    <string name="hint_enter_money">Enter the amount</string>
+    <string name="hint_enter_remark">Enter a note</string>
+    <string name="hint_enter_type_name">Please enter the type name</string>
+
+    <string name="text_affirm">OK</string>
+    <string name="text_symbol_outlay">-</string>
+    <string name="text_symbol_income">+</string>
+    <string name="text_home_footer_tip">Statistics page can view previous month records</string>
+    <string name="text_add_record">Record</string>
+    <string name="text_modify_record">Modify</string>
+    <string name="text_done">Done</string>
+    <string name="text_title_drag_sort">Long press item to sort</string>
+    <string name="text_title_type_manage">Management</string>
+    <string name="text_button_sort">Sort</string>
+    <string name="text_outlay">Pay</string>
+    <string name="text_income">Earn</string>
+    <string name="text_setting">setting</string>
+    <string name="text_title_setting">Setting</string>
+    <string name="text_month_outlay">Pay($)</string>
+    <string name="text_month_income">Earn($)</string>
+    <string name="text_today">today</string>
+    <string name="text_yesterday">yesterday</string>
+    <string name="text_type_eat">food</string>
+    <string name="text_type_clothes">clothes</string>
+    <string name="text_type_makeups">makeups</string>
+    <string name="text_type_hairdressing">hairdressing</string>
+    <string name="text_type_skincare">skincare</string>
+    <string name="text_type_jewelry">jewelry</string>
+    <string name="text_type_humanity">gift</string>
+    <string name="text_type_candy">snacks</string>
+    <string name="text_type_3c">3c</string>
+    <string name="text_type_pet">pet</string>
+    <string name="text_type_pill">pill</string>
+    <string name="text_type_calendar">necessary</string>
+    <string name="text_type_pluralism">pluralism</string>
+    <string name="text_type_salary">salary</string>
+
+    <string name="text_account_cash">cash</string>
+    <string name="text_account_zhifubao">zhifubao</string>
+    <string name="text_account_weixin">weixin</string>
+
+    <string name="text_tip_1">敏感肌不要使用清洁能力太强的洁面产品。</string>
+    <string name="text_tip_2">阳光中的紫外线是皮肤所有外源性致衰老因素中影响最大的，所以防晒霜四季都要使用，不仅仅是夏季需要哦。</string>
+    <string name="text_tip_3">上粉底液时要遵循少量多次的原则</string>
+    <string name="text_tip_4">物理防晒的效果化学防晒好</string>
+    <string name="text_tip_5">染发前两天最好不洗头，油脂在染发过程中可以有效保护头皮</string>
+    <string name="text_tip_6">护肤需要了解自己的肤质和皮肤问题，选择合适的步骤和产品，不是“一个步骤都不能少”，也不是“越贵越好”</string>
+    <string name="text_tip_7">不做好防晒的美白工作都是耍流氓</string>
+
+    <string name="text_current_month_empty_tip">No bookkeeping started this month\n\nClick the button to start bookkeeping</string>
+    <string name="text_month_empty_tip">Every bill is a bit of life</string>
+    <string name="text_button_cancel">Cancel</string>
+    <string name="text_button_know">i see</string>
+    <string name="text_button_affirm_delete">delete</string>
+    <string name="text_dialog_delete">delete</string>
+    <string name="text_delete_type_note">After you delete this category, you will not be able to select this category on the bookkeeping page. The original bills under this category will remain unchanged.</string>
+    <string name="text_save">Save</string>
+    <string name="text_add">Add</string>
+    <string name="text_modify">Modify</string>
+    <string name="text_outlay_type">Type of pay</string>
+    <string name="text_income_type">Type of earn</string>
+    <string name="text_delete">delete</string>
+    <string name="text_tip_type_delete">The type of record has been deleted and the first type has been selected by default</string>
+    <string name="text_order">Bill</string>
+    <string name="text_reports">Reports</string>
+    <string name="text_money_symbol">$</string>
+    <string name="text_month_outlay_symbol">Pay&#160;$</string>
+    <string name="text_month_income_symbol">Earn&#160;$</string>
+    <string name="text_unit_account">pencil</string>
+    <string name="text_day">&#160;</string>
+    <string name="text_choose_month">Select month</string>
+    <string name="text_sort_time">By time</string>
+    <string name="text_sort_money">By amount</string>
+    <string name="text_title_open_source">License</string>
+    <string name="text_title_about">About</string>
+    <string name="text_backup">Back up now</string>
+    <string name="text_backup_save">Backup file will be saved to/sdcard/backup_moneykeeper/MoneyKeeperBackupUser.db</string>
+    <string name="text_setting_money">Bookkeeping</string>
+    <string name="text_setting_type_manage">type management</string>
+    <string name="text_setting_backup">Backup</string>
+    <string name="text_go_backup">Back up now</string>
+    <string name="text_setting_restore">Restore</string>
+    <string name="text_setting_about_and_help">About|Help</string>
+    <string name="text_about">About</string>
+    <string name="text_setting_score">Score</string>
+    <string name="text_setting_donate">Donate</string>
+    <string name="text_privacy_policy">Privacy Policy</string>
+    <string name="text_setting_lisence">Open source license</string>
+    <string name="text_setting_help">Help</string>
+    <string name="text_setting_good_score">Give a good score,please</string>
+    <string name="text_about_content">Understand our design philosophy</string>
+    <string name="text_setting_auto_backup">Automatic backup</string>
+    <string name="text_setting_go_backup_content">Backup file will be saved to/sdcard/backup_moneykeeper</string>
+    <string name="text_setting_restore_content">Backup files will read from/sdcard/backup_moneykeeper</string>
+    <string name="text_setting_auto_backup_content">Data change automatic backup (recommended to open)</string>
+    <string name="text_restore">Restore</string>
+    <string name="text_list_restore">The following is the backup file, click restore:</string>
+    <string name="text_restore_tip">The backup file name with Auto word indicates automatic backup. With User indication, click the Backup Now button to manually back up, and before restoration, save a copy of the data before restoration.</string>
+    <string name="text_before_reverting">_BeforeReverting</string>
+    <string name="text_storage">Storage permissions</string>
+    <string name="text_storage_content">In order to back up your accounting data automatically, you need to open the storage permission.</string>
+    <string name="text_open_permissions">Permissions</string>
+    <string name="text_storage_permission_tip">Backup related operations require storage permissions to set open permissions</string>
+    <string name="text_close_auto_backup">Turn off automatic backup</string>
+    <string name="text_close_auto_backup_tip">After the automatic backup is turned off, you need to manually click 「Back up now」 to back up the data and you may lose some of the latest data.</string>
+    <string name="text_tip_backup_fail">Auto backup failed</string>
+    <string name="text_share">Share</string>
+    <string name="text_more">More</string>
+    <string name="text_dev_designer">Developer &amp; Designer</string>
+    <string name="text_designer">Designer</string>
+    <string name="text_developer_designer">Developer &amp; Designer</string>
+    <string name="text_icon_launcher">Want a designer to design an application launch icon</string>
+    <string name="text_share_to">Share to</string>
+    <string name="text_app_slogan">Simple, pure accounting application</string>
+    <string name="text_share_content">I found a simple, pure billing application, click on the link to download https://github.com/Bakumon/MoneyKeeper/releases/latest</string>
+    <string name="text_member_self">Myself</string>
+    <string name="text_member_family">Family</string>
+    <string name="text_member_parents">Parents</string>
+    <string name="text_member_children">Children</string>
+    <string name="text_member_husband">Husband</string>
+    <string name="text_member_wife">Wife</string>
+    <string name="toast_get_member_summary_fail">Failed to get member summary data</string>
+    <string name="text_member_none">No Member</string>
+    <string name="text_maintype_beauty">Beauty</string>
+    <string name="text_maintype_dayly">Dayly</string>
+    <string name="text_maintype_diet">Diet</string>
+    <string name="text_maintype_salary">Salary</string>
+    <string name="text_maintype_transfer">Transfer</string>
+    <string name="content_des_membersetting">membersetting</string>
+    <string name="text_title_account_manage">Account Manage</string>
+    <string name="toast_least_one_account">Please keep at least one account</string>
+    <string name="text_delete_account_note">After you delete this account, you will not be able to select this account on the bookkeeping page. The original bills under this account will remain unchanged.</string>
+    <string name="hint_enter_account_name">Please enter the account name</string>
+    <string name="toast_account_is_exist">The account is  exist.</string>
+    <string name="toast_account_save_fail">Failed to save the record type</string>
+    <string name="text_member">Member</string>
+    <string name="text_account">Account</string>
+    <string name="text_shop">Shop</string>
+    <string name="text_shop_init">No Shop</string>
+    <string name="text_project">Project</string>
+    <string name="text_project_init">No Project</string>
+    <string name="text_type">Sort</string>
+    <string name="type_sort_recent_use">Recently Use</string>
+    <string name="type_sort_meals">meals</string>
+    <string name="text_transfer">Transfer</string>
+
+    <string name="text_year">year</string>
+    <string name="text_month">month</string>
+    <string name="text_surplus">surplus</string>
+    <string name="text_flow_in">flow in</string>
+    <string name="text_flow_out">flow out</string>
+    <string name="text_time">Time</string>
+    <string name="text_note">Notes</string>
+    <string name="text_graph">graph</string>
+    <string name="text_setting_account_manage">type management</string>
+    <string name="text_account_from">From Account</string>
+    <string name="text_account_to">To Account</string>
+    <string name="text_type_transfer">transfer</string>
+
+    <string name="text_choose_year">choose year</string>
+    <string name="text_shop_other">Others</string>
+    <string name="text_shop_restaurant">Restaurant</string>
+    <string name="text_shop_bank">bank</string>
+    <string name="text_shop_market">market</string>
+    <string name="text_shop_supermarket">Supermaket</string>
+    <string name="text_project_celebration">celebration</string>
+    <string name="text_project_reimbursement">Reimbursement</string>
+    <string name="text_project_out">business travel</string>
+    <string name="text_project_decoration">decoration</string>
+    <string name="text_title_member_manage">Member Manage</string>
+    <string name="text_delete_member_note">After you delete this member, you will not be able to select this member on the bookkeeping page. The original bills under this member will remain unchanged.</string>
+    <string name="hint_enter_member_name">Please enter the member name</string>
+    <string name="toast_member_is_exist">The member is  exist.</string>
+    <string name="toast_member_save_fail">Failed to save the member type</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FA5A67</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorTextWhite1">#ffffff</color>
+    <color name="colorTextWhite2">#ffffff</color>
+    <color name="colorTextWhite3">#b3b0b0</color>
+    <color name="colorTextWhite4">#ffffff</color>
+    <color name="colorTextWhite5">#f7f7f7</color>
+
+    <color name="colorTextGray">#656666</color>
+    <color name="colorItem">#414459</color>
+    <color name="colorAccentEnd">#9576fc</color>
+    <color name="colorAccentStart">#71b8fb</color>
+    <color name="colorKeyBoard">#656666</color>
+
+    <color name="colorPieChart1">#96c6fd</color>
+    <color name="colorPieChart2">#6f54e6</color>
+    <color name="colorPieChart3">#e6a239</color>
+    <color name="colorPieChart4">#86d06d</color>
+    <color name="colorPieChart5">#59B6DC</color>
+    <color name="colorPieChart6">#F9C909</color>
+    <color name="colorPieChart7">#e1677a</color>
+    <color name="theme_color2">#FA4163</color>
+    <color name="theme_color3">#FA5A67</color>
+    <color name="theme_color4">#FC6F71</color>
+    <color name="theme_color5">#FA8488</color>
+    <color name="theme_color6">#F7C5CE</color>
+
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="red_f4333c">#F4333C</color>
+
+</resources>

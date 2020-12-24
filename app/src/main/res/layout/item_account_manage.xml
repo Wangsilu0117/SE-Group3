@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="bottomMargin"
+            type="int" />
+
+        <variable
+            name="account"
+            type="me.bakumon.moneykeeper.database.entity.Account" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        app:custom_margin_bottom="@{bottomMargin}"
+        tools:background="@color/colorTextWhite">
+
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/qianjin1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:text="@{account.name}"
+            android:textColor="@color/colorKeyBoard"
+            android:textSize="16sp"
+            tools:text="餐饮" />
+    </LinearLayout>
+</layout>

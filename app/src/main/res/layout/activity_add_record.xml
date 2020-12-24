@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<!--
+    public static int TYPE_OUTLAY = 0;
+    public static int TYPE_INCOME = 1;
+    public static int TYPE_TRANSFER = 2;
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.bakumon.moneykeeper.ui.add.AddRecordActivity">
+
+    <data>
+        <variable
+            name="curPageType"
+            type="int" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/layout_title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="234"
+            android:background="@color/colorTextWhite5"
+            android:orientation="vertical">
+
+            <!--            <include-->
+            <!--                android:id="@+id/title_bar"-->
+            <!--                layout="@layout/layout_title_bar" />-->
+
+            <include
+                android:id="@+id/type_choice"
+                layout="@layout/layout_type_choice" />
+
+            <me.bakumon.moneykeeper.view.TypePageView
+                android:id="@+id/type_page_outlay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                android:background="@drawable/bg_item"/>
+
+            <me.bakumon.moneykeeper.view.TypePageView
+                android:id="@+id/type_page_income"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_item"/>
+
+            <me.bakumon.moneykeeper.view.TypePageView
+                android:id="@+id/type_page_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_item"/>
+
+            <LinearLayout
+                android:id="@+id/sort_table"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_item"
+                android:orientation="vertical">
+                <!--                成员-->
+                <!--分类-->
+                <Spinner
+                    android:id="@+id/spinner_maintype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:autofillHints="分类"
+                    android:background="@drawable/bg_date"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp" />
+
+
+                <!--                分类-->
+<!--                在支出或收入页面才显示-->
+                <LinearLayout
+                    android:id="@+id/sort_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_sort"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_type"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/edt_type_father"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:maxLength="9"
+                        android:text="@string/text_type"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextBlack"
+                        android:textColorHint="@color/colorTextWhite3"
+                        android:textSize="18sp" />
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingBottom="3dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingRight="10dp"-->
+<!--                        android:paddingTop="3dp"-->
+<!--                        android:src="@drawable/ic_baseline_chevron_right_24"/>-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/edt_type_son"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text=""-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:maxLength="9"-->
+<!--                        android:paddingBottom="3dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingRight="10dp"-->
+<!--                        android:paddingTop="3dp"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textColor="@color/colorTextBlack" />-->
+                </LinearLayout>
+
+                <!--                账户-->
+<!--                在支出或收入页面才显示-->
+                <LinearLayout
+                    android:id="@+id/sort_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_account"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_account"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/edt_account"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_account_cash"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sort_transfer_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_account"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_account_transfer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_account_from"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/edt_account_from"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:maxLength="9"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="@string/text_account_cash"
+                        android:textColor="@color/colorTextBlack"
+                        android:textColorHint="@color/colorTextWhite3"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sort_transfer_account_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_account"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_account_transferto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_account_to"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+
+
+                    <TextView
+                        android:id="@+id/edt_account_to"
+                        android:layout_width="167dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:maxLength="9"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="@string/text_account_weixin"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <!--                成员-->
+                <LinearLayout
+                    android:id="@+id/sort_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_member"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_member"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_member"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/edt_member"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_member_none"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <!--                时间-->
+                <!--                先不改，因为这里有逻辑-->
+                <LinearLayout
+                    android:id="@+id/sort_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_time"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_time"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+                    <me.bakumon.moneykeeper.view.QMUIAlphaTextView
+                        android:id="@+id/qm_tv_date"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:maxLength="20"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/text_today"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorTextBlack" />
+
+                </LinearLayout>
+                <!--备注-->
+                <LinearLayout
+                    android:id="@+id/sort_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_note"/>
+
+                    <TextView
+                        android:id="@+id/tv_notes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_note"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/edt_remark"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_date"
+                        android:hint="@string/hint_enter_remark"
+                        android:imeOptions="actionDone"
+                        android:maxLength="9"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextGray"
+                        android:textColorHint="@color/colorTextWhite3"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+
+                <!--                商家-->
+                <LinearLayout
+                    android:id="@+id/sort_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_shop"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_shop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_shop"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/edt_shop"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_shop_init"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <!--                项目-->
+                <LinearLayout
+                    android:id="@+id/sort_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/ic_project"/>
+
+                    <TextView
+                        android:id="@+id/qm_tv_项目"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/text_project"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/edt_project"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_project_init"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <me.bakumon.moneykeeper.view.KeyboardView
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:background="@drawable/bg_item" />
+
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,246 @@
+<!--
+  ~ Copyright 2018 Bakumon. https://github.com/Bakumon
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <!--<string name="app_name">记账</string>-->
+
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+
+    <string name="create_gesture_default">绘制解锁图案</string>
+    <string name="create_gesture_correct">再次绘制解锁图案</string>
+    <string name="create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
+
+
+    <string name="content_des_setting">设置</string>
+    <string name="content_des_membersetting">成员管理</string>
+    <string name="content_des_statistics">统计</string>
+    <string name="content_des_close">关闭</string>
+
+    <string name="toast_add_record_fail">记账失败，请重试</string>
+    <string name="toast_modify_record_fail">记录修改失败</string>
+    <string name="toast_sort_fail">排序失败</string>
+    <string name="toast_least_one_type">请至少保留一个类型</string>
+    <string name="toast_least_one_account">请至少保留一个账户</string>
+    <string name="toast_delete_fail">删除失败</string>
+    <string name="toast_type_img_fail">类型图片获取失败</string>
+    <string name="toast_type_save_fail">类型保存失败</string>
+    <string name="toast_account_save_fail">账户保存失败</string>
+    <string name="toast_member_save_fail">成员保存失败</string>
+    <string name="toast_type_is_exist">&#160;类型已经存在</string>
+    <string name="toast_account_is_exist">&#160;账户已经存在</string>
+    <string name="toast_member_is_exist">&#160;成员已经存在</string>
+    <string name="toast_record_delete_fail">记录删除失败</string>
+    <string name="toast_current_sum_money_fail">本月支出收入总数获取失败</string>
+    <string name="toast_records_fail">获取记录列表失败</string>
+    <string name="toast_init_types_fail">初始化类型数据失败</string>
+    <string name="toast_get_types_fail">获取类型数据失败</string>
+    <string name="toast_get_statistics_fail">获取统计数据失败</string>
+    <string name="toast_get_month_summary_fail">获取该月汇总数据失败</string>
+    <string name="toast_get_type_summary_fail">获取类型汇总数据失败</string>
+    <string name="toast_get_member_summary_fail">获取成员汇总数据失败</string>
+    <string name="toast_not_install_market">您的手机没有安装Android应用市场</string>
+    <string name="toast_not_install_alipay">谢谢，您没有安装支付宝客户端</string>
+    <string name="toast_is_not_writable_external">备份失败，外部存储不可用</string>
+    <string name="toast_restore_fail">恢复备份失败</string>
+    <string name="toast_backup_list_fail">备份文件列表获取失败</string>
+    <string name="toast_open_auto_backup">自动备份已关闭，设置界面可重新打开</string>
+
+    <string name="hint_enter_money">输入金额</string>
+    <string name="hint_enter_remark">请输入备注</string>
+    <string name="hint_enter_type_name">请输入类型名称</string>
+    <string name="hint_enter_account_name">请输入账户名称</string>
+    <string name="hint_enter_member_name">请输入成员名称</string>
+
+    <string name="text_affirm">确定</string>
+    <string name="text_symbol_outlay">-</string>
+    <string name="text_symbol_income">+</string>
+    <string name="text_home_footer_tip">统计页面可以查看往月记录</string>
+    <string name="text_add_record">记一笔</string>
+    <string name="text_modify_record">修改</string>
+    <string name="text_done">完成</string>
+    <string name="text_title_drag_sort">长按拖动排序</string>
+    <string name="text_title_type_manage">分类管理</string>
+    <string name="text_title_account_manage">账户管理</string>
+    <string name="text_title_member_manage">成员管理</string>
+    <string name="text_button_sort">排序</string>
+    <string name="text_outlay">支出</string>
+    <string name="text_income">收入</string>
+    <string name="text_transfer">转账</string>
+    <string name="text_setting">设置</string>
+    <string name="text_title_setting">设置</string>
+    <string name="text_month_outlay">本月支出： </string>
+    <string name="text_month_income">本月收入： </string>
+    <string name="text_maintype_beauty">女神</string>
+    <string name="text_maintype_diet">饮食</string>
+    <string name="text_maintype_dayly">日常</string>
+    <string name="text_maintype_salary">薪水</string>
+    <string name="text_maintype_transfer">转账</string>
+    <string name="text_today">今天</string>
+    <string name="text_yesterday">昨天</string>
+    <string name="text_type_eat">餐饮</string>
+    <string name="text_type_clothes">衣服</string>
+    <string name="text_type_makeups">美妆</string>
+    <string name="text_type_hairdressing">美发</string>
+    <string name="text_type_skincare">护肤</string>
+    <string name="text_type_jewelry">首饰</string>
+    <string name="text_type_humanity">礼物</string>
+    <string name="text_type_candy">零食</string>
+    <string name="text_type_3c">电子产品</string>
+    <string name="text_type_pet">宠物</string>
+    <string name="text_type_pill">医疗</string>
+    <string name="text_type_calendar">日用</string>
+    <string name="text_type_pluralism">兼职</string>
+    <string name="text_type_salary">薪资</string>
+    <string name="text_type_transfer">转账</string>
+
+
+    <string name="text_tip_1">敏感肌不要使用清洁能力太强的洁面产品。</string>
+    <string name="text_tip_2">阳光中的紫外线是皮肤所有外源性致衰老因素中影响最大的，所以防晒霜四季都要使用，不仅仅是夏季需要哦。</string>
+    <string name="text_tip_3">上粉底液时要遵循少量多次的原则</string>
+    <string name="text_tip_4">物理防晒的效果化学防晒好</string>
+    <string name="text_tip_5">染发前两天最好不洗头，油脂在染发过程中可以有效保护头皮</string>
+    <string name="text_tip_6">护肤需要了解自己的肤质和皮肤问题，选择合适的步骤和产品，不是“一个步骤都不能少”，也不是“越贵越好”</string>
+    <string name="text_tip_7">不做好防晒的美白工作都是耍流氓</string>
+    
+
+    <string name="text_current_month_empty_tip">本月未开始记账\n\n点击加号，开始记账</string>
+    <string name="text_month_empty_tip">每一笔账单，都是生活的点滴</string>
+    <string name="text_button_cancel">取消</string>
+    <string name="text_button_know">我知道了</string>
+    <string name="text_button_affirm_delete">确认删除</string>
+    <string name="text_dialog_delete">删除</string>
+    <string name="text_delete_type_note">删除该分类后，将无法在记账页选择该分类，该分类下原有账单仍保持不变</string>
+    <string name="text_delete_account_note">删除该账户后，将无法在记账页选择该账户，该账户下原有账单仍保持不变</string>
+    <string name="text_delete_member_note">删除该成员后，将无法在记账页选择该成员，该成员下原有账单仍保持不变</string>
+    <string name="text_save">保存</string>
+    <string name="text_add">添加</string>
+    <string name="text_modify">修改</string>
+    <string name="text_outlay_type">支出类型</string>
+    <string name="text_income_type">收入类型</string>
+    <string name="text_delete">删除</string>
+    <string name="text_tip_type_delete">该记录的类型已经被删除，已默认选择了第一个类型</string>
+    <string name="text_order">账单</string>
+    <string name="text_reports">报表</string>
+    <string name="text_money_symbol">¥</string>
+    <string name="text_month_outlay_symbol">支出&#160;¥</string>
+    <string name="text_month_income_symbol">收入&#160;¥</string>
+    <string name="text_unit_account">笔</string>
+    <string name="text_day">日&#160;</string>
+    <string name="text_choose_month">选择月份</string>
+    <string name="text_sort_time">按时间</string>
+    <string name="text_sort_money">按金额</string>
+    <string name="text_title_open_source">开源许可证</string>
+    <string name="text_title_about">关于</string>
+    <string name="toast_backup_success">备份成功</string>
+    <string name="toast_backup_fail">备份失败</string>
+    <string name="text_backup">立即备份</string>
+    <string name="text_backup_save">备份文件将保存到/sdcard/backup_moneykeeper/MoneyKeeperBackupUser.db</string>
+    <string name="text_setting_money">记账</string>
+    <string name="text_setting_type_manage">收支类型管理</string>
+    <string name="text_setting_account_manage">账户管理</string>
+    <string name="text_setting_backup">备份</string>
+    <string name="text_go_backup">立即备份</string>
+    <string name="text_setting_restore">恢复备份</string>
+    <string name="text_setting_about_and_help">关于|帮助</string>
+    <string name="text_about">关于</string>
+    <string name="text_setting_score">评分</string>
+    <string name="text_setting_donate">捐赠作者</string>
+    <string name="text_privacy_policy">隐私政策</string>
+    <string name="text_setting_lisence">开源许可证</string>
+    <string name="text_setting_help">帮助</string>
+    <string name="text_setting_good_score">给个好评呗</string>
+    <string name="text_about_content">了解我们的设计理念</string>
+    <string name="text_setting_auto_backup">自动备份</string>
+    <string name="text_setting_go_backup_content">备份文件将保存到/sdcard/backup_moneykeeper</string>
+    <string name="text_setting_restore_content">备份文件将从/sdcard/backup_moneykeeper读取</string>
+    <string name="text_setting_auto_backup_content">数据有改变自动备份（建议开启）</string>
+    <string name="text_restore">恢复备份</string>
+    <string name="text_list_restore">以下是备份文件，点击恢复：</string>
+    <string name="text_restore_tip">备份文件名带有Auto字样表示自动备份，带有User表示点击立即备份按钮手动备份，恢复之前会保存一份恢复之前的数据。</string>
+    <string name="text_before_reverting">_恢复之前</string>
+    <string name="text_storage">开启存储权限</string>
+    <string name="text_storage_content">为了自动备份您的记账数据，需要开启存储权限。</string>
+    <string name="text_open_permissions">开启权限</string>
+    <string name="text_storage_permission_tip">备份相关操作需要存储权限，去设置界面开启权限</string>
+    <string name="text_close_auto_backup">关闭自动备份</string>
+    <string name="text_close_auto_backup_tip">关闭自动备份后，需要手动点击「立即备份」来备份数据，可能会丢失部分最新的数据。</string>
+    <string name="text_tip_backup_fail">自动备份失败</string>
+    <string name="text_share">分享</string>
+    <string name="text_more">更多</string>
+    <string name="text_dev_designer">设计和开发</string>
+    <string name="text_designer">总体设计</string>
+    <string name="text_developer_designer">开发和部分设计</string>
+    <string name="text_icon_launcher">默默地求一波启动图设计</string>
+    <string name="text_share_to">分享到</string>
+    <string name="text_app_slogan">简单、纯粹的记账应用</string>
+    <string name="text_share_content">我发现了一个简单、纯粹的记账应用，点击链接下载 https://github.com/Bakumon/MoneyKeeper/releases/latest</string>
+
+    <string name="text_member">成员</string>
+    <string name="text_member_none">无成员</string>
+    <string name="text_member_self">本人</string>
+    <string name="text_member_family">家庭</string>
+    <string name="text_member_parents">父母</string>
+    <string name="text_member_children">子女</string>
+    <string name="text_member_wife">妻子</string>
+    <string name="text_member_husband">丈夫</string>
+
+
+    <string name="text_account">账户</string>
+    <string name="text_account_from">从账户</string>
+    <string name="text_account_to">到账户</string>
+    <string name="text_account_cash">现金</string>
+    <string name="text_account_zhifubao">支付宝</string>
+    <string name="text_account_weixin">微信</string>
+
+    <string name="text_shop">商家</string>
+    <string name="text_shop_init">无商家</string>
+    <string name="text_shop_other">其他</string>
+    <string name="text_shop_restaurant">餐厅</string>
+    <string name="text_shop_bank">银行</string>
+    <string name="text_shop_market">商场</string>
+    <string name="text_shop_supermarket">超市</string>
+
+    <string name="text_project">项目</string>
+    <string name="text_project_init">无项目</string>
+    <string name="text_project_celebration">过年</string>
+    <string name="text_project_reimbursement">报销</string>
+    <string name="text_project_out">出差</string>
+    <string name="text_project_decoration">装修</string>
+
+    <string name="text_type">分类</string>
+    <string name="type_sort_recent_use">最近使用</string>
+    <string name="type_sort_meals">三餐</string>
+
+    <string name="text_year">年</string>
+    <string name="text_month">月</string>
+
+    <string name="text_surplus">结余</string>
+    <string name="text_flow_in">流入</string>
+    <string name="text_flow_out">流出</string>
+
+    <string name="text_time">时间</string>
+    <string name="text_note">备注</string>
+
+    <string name="text_graph">图表</string>
+
+    <string name="text_choose_year">选择年份</string>
+</resources>
